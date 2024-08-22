@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let product1 = {
+				name: "Phone",
+				price: 10000,
+				displayInfo: display,
+			};
+
+			let product2 = {};
+			product2.name = "Laptop";
+			product2.price = 50000;
+			product2.displayInfo = display;
+
+			function display() {
+				console.log(this.name);
+				console.log(this.price);
+			}
+
+            display.apply({name:"a", price:1});//apply, call, bind
+            // ()=>{this }
+
+			product1.displayInfo();
+			product2.displayInfo();
+		</script>
+	</body>
+</html>
